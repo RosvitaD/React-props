@@ -1,33 +1,42 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+function Card(props) {
+  return (
+    <div>
+      <h2> {props.name} </h2>
+      <img src={props.img} alt="avatar_img" />
+      <p> {props.tel} </p>
+      <p> {props.email} </p>
+      <p>{props.about}</p>
+    </div>
+  );
+}
+
 ReactDOM.render(
   <div>
-    <h1>My Contacts</h1>
-
-    <h2>Beyonce</h2>
-    <img
-      src="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
-      alt="avatar_img"
+    <h1> My Contacts </h1>
+    <Card
+      name="Beyonce"
+      img="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
+      tel="+123 456 789"
+      email="b @beyonce.com"
     />
-    <p>+123 456 789</p>
-    <p>b@beyonce.com</p>
 
-    <h2>Jack Bauer</h2>
-    <img
-      src="https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg"
-      alt="avatar_img"
+    <Card
+      name="Karkle"
+      img="https://image.shutterstock.com/image-photo/pine-trees-on-edge-dune-260nw-1670726566.jpg"
+      email="www.karkle.com"
+      about="Yra etnokultūrinis parkas, informacinė ekspozicija apie gintaro istoriją, vaikų poilsiavietė, paplūdimiai, išlikusios senos sodybos, kuršių kapinės. Kaimo pietvakariuose yra unikali molinga jūros pakrantės atodanga, garsusis Olando kepurės skardis (24 m virš jūros). Yra turizmo centras „Žiogelis“."
     />
-    <p>+987 654 321</p>
-    <p>jack@nowhere.com</p>
+    <Card
+      name="Dino parkas"
+      img="https://lh3.googleusercontent.com/proxy/7ftVE4eV7DGdZ2QX_wmzUEGVFjSMmj7fu5wXnYxouW2stQ_cGRT_R5njoR1nYnBxWo5fRvfk1gV-hmBzvFMxBGEoS_icMIbqTJCc2cGM7hZ0rQfwF3Lm8gFV-UEMeTmKClKSPM3EPOGcxBMgTjFdAg"
+      tel="+370 595494"
+      email="dino@dino.lt"
+    />
 
-    <h2>Chuck Norris</h2>
-    <img
-      src="https://i.pinimg.com/originals/e3/94/47/e39447de921955826b1e498ccf9a39af.png"
-      alt="avatar_img"
-    />
-    <p>+918 372 574</p>
-    <p>gmail@chucknorris.com</p>
+    <input id="fName" />
   </div>,
   document.getElementById("root")
 );
